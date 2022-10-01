@@ -1,4 +1,4 @@
-package com.manmayi.recipe.entity;
+package com.manmayi.recipe.model;
 
 import lombok.*;
 
@@ -13,4 +13,5 @@ public class Tag {
 
     @Id
     private String tag;
+
 }

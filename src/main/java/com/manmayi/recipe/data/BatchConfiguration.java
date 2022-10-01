@@ -1,6 +1,6 @@
 package com.manmayi.recipe.data;
 
-import com.manmayi.recipe.entity.Recipe;
+import com.manmayi.recipe.model.Recipe;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

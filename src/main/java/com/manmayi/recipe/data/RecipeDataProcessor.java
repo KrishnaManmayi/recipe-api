@@ -1,6 +1,6 @@
 package com.manmayi.recipe.data;
 
-import com.manmayi.recipe.entity.*;
+import com.manmayi.recipe.model.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemProcessor;
 
@@ -13,7 +13,7 @@ public class RecipeDataProcessor implements ItemProcessor<RecipeInput, Recipe> {
         Recipe transformedRecipe = new Recipe();
 
         transformedRecipe.setRecipeId(recipeInput.getId());
-        transformedRecipe.setRecipe_title(recipeInput.getRecipe_title());
+        transformedRecipe.setRecipeTitle(recipeInput.getRecipe_title());
         transformedRecipe.setUrl(recipeInput.getUrl());
         transformedRecipe.setVote_count(recipeInput.getVote_count());
         transformedRecipe.setRating(recipeInput.getRating());

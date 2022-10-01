@@ -1,4 +1,4 @@
-package com.manmayi.recipe.entity;
+package com.manmayi.recipe.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +18,7 @@ public class Recipe {
 
     @Id
     private long recipeId;
-    private String recipe_title;
+    private String recipeTitle;
     private String url;
     private int vote_count;
     private double rating;
