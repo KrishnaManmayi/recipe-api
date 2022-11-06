@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/recipe")
+@CrossOrigin(origins = "https://soft-naiad-e75617.netlify.app/")
 @Slf4j
 public class RecipeController {
 
@@ -27,8 +28,12 @@ public class RecipeController {
 
     @PostMapping("/search")
     public List<Recipe> search(@RequestBody SearchCriteria searchCriteria){
+        long start = System.currentTimeMillis();
+        log.info("Received request for the search criteria "+ searchCriteria);
         List<Recipe> recipes = recipeService.search(searchCriteria);
-        log.info("Total number of recipes fetched with the search criteria "+searchCriteria+" :are "+recipes.size());
+        log.info("Total number of recipes fetched are "+recipes.size());
+        long end = System.currentTimeMillis();
+        log.info("Request completed. Time taken: "+ (end-start)+"ms");
         return recipes;
     }
 

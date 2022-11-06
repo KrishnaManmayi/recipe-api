@@ -12,6 +12,10 @@ public class RecipeDataProcessor implements ItemProcessor<RecipeInput, Recipe> {
     public Recipe process(final RecipeInput recipeInput) {
         Recipe transformedRecipe = new Recipe();
 
+//        if(recipeInput.getCourse()==null || recipeInput.getCourse().trim().length()==0){
+//            return null;
+//        }
+
         transformedRecipe.setRecipeId(recipeInput.getId());
         transformedRecipe.setRecipeTitle(recipeInput.getRecipe_title());
         transformedRecipe.setUrl(recipeInput.getUrl());
