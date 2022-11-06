@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/recipe")
-@CrossOrigin(origins = "https://soft-naiad-e75617.netlify.app/")
+@CrossOrigin(origins = "https://soft-naiad-e75617.netlify.app")
 @Slf4j
 public class RecipeController {
 
